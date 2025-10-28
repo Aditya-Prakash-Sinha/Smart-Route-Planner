@@ -1,0 +1,31 @@
+# Core Libraries
+pandas==2.2.2
+numpy==1.26.4
+
+# Streamlit for Web UI
+streamlit==1.39.0
+
+# Visualization
+matplotlib==3.9.2
+seaborn==0.13.2
+plotly==5.24.1
+
+# Machine Learning / Optimization
+scikit-learn==1.5.2
+scipy==1.14.1
+
+# Geospatial / Distance Calculation (Optional Enhancements)
+geopy==2.4.1
+
+# Data Handling & Utilities
+openpyxl==3.1.5
+requests==2.32.3
+
+# Environment Impact Calculations (CO2, etc.)
+carbonai==0.2.1
+
+# Caching / Performance
+joblib==1.4.2
+
+# Development Utilities
+python-dotenv==1.0.1
