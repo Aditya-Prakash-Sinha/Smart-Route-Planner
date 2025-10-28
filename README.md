@@ -46,7 +46,7 @@ Smart Route Planner/
 ⚙️ Installation and Setup
 
 Clone the repository
-git clone https://github.com/yourusername/smart-route-planner.git
+git clone https://github.com/Aditya-Prakash-Sinha/Smart-Route-Planner
 cd smart-route-planner
 Install dependencies
 pip install -r requirements.txt
