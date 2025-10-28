@@ -119,17 +119,7 @@ def score_vehicle_for_order(order_row, vehicle_row, avg_speed_kmph, fuel_price_p
 def greedy_assign_orders_to_vehicles(merged_orders, fleet, weights=(0.4, 0.3, 0.3),
                                     avg_speed_kmph=DEFAULT_AVG_SPEED_KMPH,
                                     fuel_price_per_l=DEFAULT_FUEL_PRICE_PER_L):
-    """
-    Greedy assignment:
-      - For each order (in input order or by priority), evaluate all currently available vehicles
-      - For the order, compute raw cost/time/emissions for each candidate vehicle
-      - Normalize these three components across candidate vehicles (min-max) -> produce normalized 0..1 components
-      - Compute weighted score = w_cost * norm_cost + w_time * norm_time + w_env * norm_em
-      - Choose vehicle with minimum score, check capacity (vehicle capacity vs order weight). If capacity insufficient, skip vehicle.
-      - Mark vehicle as used (we assume 1 order per vehicle here for simplicity, but code supports multiple orders by not removing vehicle immediately if capacity remains)
-    Note: This is a baseline; can be extended to pack multiple orders into vehicles, route sequencing, or OR-Tools solver.
-    """
-
+  
     # copy inputs
     orders = merged_orders.copy().reset_index(drop=True)
     vehicles = fleet.copy().reset_index(drop=True)
